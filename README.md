@@ -322,6 +322,7 @@ the `connect` event. Typically a `net.Socket`.
         urls which upon reconnect can have become expired.
   * `resubscribe` : if connection is broken and reconnects,
      subscribed topics are automatically subscribed again (default `true`)
+  * `clientType` : tells if we are in the client 'browser' or a standalone node process 'node'. Possible values are 'browser' or 'node'. If unspecified, tries to auto-detect with `isBrowser = (typeof process !== 'undefined' && process.title !== 'browser') || typeof __webpack_require__ !== 'function'`
 
 In case mqtts (mqtt over tls) is required, the `options` object is
 passed through to
